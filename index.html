@@ -84,15 +84,15 @@
 
 
 
-<meta name="description">
+<meta name="description" content="(。・`ω´・) 哇 他好酷！">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="nano wooorld">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:site_name" content="nano wooorld">
+<meta property="og:description" content="(。・`ω´・) 哇 他好酷！">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="nano wooorld">
+<meta name="twitter:description" content="(。・`ω´・) 哇 他好酷！">
 
 
 
@@ -110,7 +110,7 @@
   };
 </script>
 
-  <title> Hexo </title>
+  <title> nano wooorld </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,11 +143,11 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Hexo</span>
+      <span class="site-title">nano wooorld</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">minor</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -211,6 +211,135 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/05/用hexo＋github搭建个人博客/" itemprop="url">
+                  用HEXO＋Github搭建个人博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-05T16:08:37+08:00" content="2016-06-05">
+              2016-06-05
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="用HEXO＋Github搭建个人博客"><a href="#用HEXO＋Github搭建个人博客" class="headerlink" title="用HEXO＋Github搭建个人博客"></a>用HEXO＋Github搭建个人博客</h3><h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h4><ol>
+<li><p>先安装依赖  </p>
+<ul>
+<li>npm  </li>
+<li>Git  </li>
+</ul>
+</li>
+<li><p>全局安装hexo客户端</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line"># 检查是否安装成功</span><br><span class="line">$ hexo help</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>初始化blog</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init hexo-blog</span><br><span class="line"># 速度很慢，耐心等待，会自动创建文件夹</span><br><span class="line">$ cd hexo-blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>开启本地服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>配置github地址</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Github 建立与用户名对应的仓库 [github_name.github.io]</span><br><span class="line"># 打开项目根目录下的服务器配置信息</span><br><span class="line">$ vim _config.yml</span><br><span class="line"># 输入/ 搜索 deploy 修改为</span><br><span class="line"># deploy:</span><br><span class="line">#     type: git</span><br><span class="line">#     repo: github_url</span><br><span class="line">#     branch: master</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>安装插件</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>初次部署到github</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -350,12 +479,12 @@
                src="/images/avatar.gif"
                alt="L.M.Y" />
           <p class="site-author-name" itemprop="name">L.M.Y</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+          <p class="site-description motion-element" itemprop="description">(。・`ω´・) 哇 他好酷！</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
